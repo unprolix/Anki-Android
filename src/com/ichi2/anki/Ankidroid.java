@@ -343,7 +343,7 @@ public class Ankidroid extends Activity implements Runnable
 	public void onResume()
 	{
 		super.onResume();
-		if (!deckSelected)
+		if (!deckSelected && deckFilename != null)
 		{
 			AnkiDb.openDatabase(deckFilename);
 			deckSelected = true;
